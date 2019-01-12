@@ -1,0 +1,39 @@
+$breakpoints: ( xs: 0, sm: 600px, md: 960px, lg: 1280px, xl: 1920px);
+/////////////////
+// Fonts
+////////////////
+$font-sizes: ( xxs: 10px, xs:11px, sm: 13px, md:15px, lg:17px, xl: 21px, xxl: 34px, xxxl: 42px);
+//////
+$xxxl-font: ( null: map-get($font-sizes, xl), xs: map-get($font-sizes, xl), md: map-get($font-sizes, xxl), lg: map-get($font-sizes, xxxl));
+$xxl-font: ( null: map-get($font-sizes, lg), xs: map-get($font-sizes, lg), md: map-get($font-sizes, xl), lg: map-get($font-sizes, xxl));
+$xl-font: ( null: map-get($font-sizes, md), xs: map-get($font-sizes, md), md: map-get($font-sizes, lg), lg: map-get($font-sizes, xl));
+$lg-font: ( null: map-get($font-sizes, sm), xs: map-get($font-sizes, sm), md: map-get($font-sizes, md), lg: map-get($font-sizes, lg));
+$md-font: ( null: map-get($font-sizes, xs), xs: map-get($font-sizes, xs), md: map-get($font-sizes, sm), lg: map-get($font-sizes, md));
+$sm-font: ( null: map-get($font-sizes, xs), xs: map-get($font-sizes, xs), md: map-get($font-sizes, xs), lg: map-get($font-sizes, sm));
+$xs-font: ( null: map-get($font-sizes, xxs), xs: map-get($font-sizes, xxs), md: map-get($font-sizes, xxs), lg: map-get($font-sizes, xs));
+
+/////////////////
+// Colors
+////////////////
+$brand: #000;
+$primary: #FFCD00;
+$secondary:  #9DCDFA;
+$secondary-light: #FBFCFF;
+$grey:  #828282;
+$light-grey:  #E8E8E8;
+$text: #000;
+$white: #fff;
+$alert: #FF4141;
+$success: #44C600;
+
+$font-weight-normal: 300;
+$font-weight-medium: 400;
+$font-weight-bold: 700;
+
+
+/////////////////
+// font
+////////////////
+
+$font: 'Roboto', sans-serif;
+

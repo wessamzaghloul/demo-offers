@@ -1,0 +1,64 @@
+// Responsive Font-Size
+@mixin font-size($fs-map,
+$fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint,
+  $fs-font-size in $fs-map {
+    @if $fs-breakpoint==null {
+      font-size: $fs-font-size;
+    }
+    @else {
+      // If $fs-font-size is a key that exists in
+      // $fs-breakpoints, use the value
+      @if map-has-key($fs-breakpoints,
+      $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        font-size: $fs-font-size;
+      }
+    }
+  }
+}
+
+//  Media queries mixins
+@mixin xs {
+  @media only screen and (min-width: #{map-get($breakpoints, xs)}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media only screen and (min-width: #{map-get($breakpoints, sm)}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media only screen and (min-width: #{map-get($breakpoints, md)}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media only screen and (min-width: #{map-get($breakpoints, lg)}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media only screen and (min-width: #{map-get($breakpoints,xl)}) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media only screen and (min-width: #{map-get($breakpoints,xxl)}) {
+    @content;
+  }
+}
+
+@mixin custom-width ($min,$max) {
+  @media only screen and (min-width: #{$min}) and (max-width: #{$max}) {
+    @content;
+  }
+}

@@ -1,0 +1,82 @@
+@import '~theme';
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: $font;
+    color: $text;
+    background: $white;
+}
+
+.page {
+    padding: 16px;
+    .page-title {
+        margin: 16px 0;
+        @include font-size($xxl-font);
+        font-weight: $font-weight-normal;
+        color: $text;
+    }
+
+    .page-subtitle {
+        margin: 16px 0;
+        @include font-size($xs-font);
+        font-weight: $font-weight-medium;
+        color: $grey;
+    }
+
+    .btn {
+        display: inline-block;
+        border: none;
+        min-width: 120px;
+        padding: 12px 32px;
+        margin: 0;
+        text-decoration: none;
+        background: $brand;
+        color: $white;
+        font-family: $font;
+        @include font-size($sm-font);
+        font-weight: $font-weight-bold;
+        border-radius: 8px;
+        line-height: 1;
+        cursor: pointer;
+        text-align: center;
+        transition: all 250ms ease-in-out;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        outline: none;
+
+        &:hover {
+            background: lighten($brand, 10%);
+        }
+
+        &:active {
+            transform: scale(0.99);
+        }
+
+        &.btn-primary {
+            background: $primary;
+            color: $brand;
+
+            &:hover {
+                background: lighten($primary, 10%);
+            }
+
+        }
+    }
+
+    .page-content {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+.component {
+    position: relative;
+}
+
+@import '~components/Header';
+@import '~components/OffersList';
+@import '~components/OffersListItem';
+@import '~components/Loader';
